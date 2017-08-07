@@ -1,0 +1,20 @@
+---
+layout: default
+title: 500 Startups' Investments
+---
+<h2>500 Startups' (Education) Investments</h2>
+
+<!-- Organizations -->
+{% assign investments = site.data.investments %}
+{% assign investments = investments | sort:"Name" %}
+
+<!-- Document -->
+
+{% for investment in investments %}
+
+<ul>
+<li><strong>{{ investment.Name }}</strong> ({{ investment.Date }})</li>
+</ul>
+
+{% endfor %}
+
